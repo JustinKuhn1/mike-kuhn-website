@@ -4,34 +4,34 @@ import { useRef } from 'react';
 const projects = [
   {
     id: 1,
-    title: 'Brand Redesign',
-    category: 'Branding',
-    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800',
-    description: 'Complete brand overhaul for a tech startup, including logo design, color palette, and brand guidelines.',
+    title: 'Only consume girly drinks',
+    category: 'Trulys',
+    image: '/public/IMG_4202.jpeg',
+    description: 'I cant handle harsh drinks, so I resort to the alcohol version of soy.',
     url: '/project1'
   },
   {
     id: 2,
-    title: 'E-commerce Website',
-    category: 'Web Design',
-    image: 'https://images.unsplash.com/photo-1546054454-aa26e2b734c7?auto=format&fit=crop&q=80&w=800',
-    description: 'Responsive e-commerce website with focus on user experience and conversion optimization.',
+    title: '-',
+    category: '{}',
+    image: '',
+    description: '{}',
     url: '/project2'
   },
   {
     id: 3,
-    title: 'Mobile App UI',
-    category: 'UI/UX Design',
-    image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800',
-    description: 'User interface design for a health tracking mobile application, focusing on accessibility and ease of use.',
+    title: '-',
+    category: '{}',
+    image: '',
+    description: '{}',
     url: '/project3'
   },
   {
     id: 4,
-    title: 'Product Campaign',
-    category: 'Marketing',
-    image: 'https://images.unsplash.com/photo-1542744173-05336fcc7ad4?auto=format&fit=crop&q=80&w=800',
-    description: 'Integrated marketing campaign for product launch, including digital and print materials.',
+    title: '-',
+    category: '{}',
+    image: '',
+    description: '{}',
     url: '/project4'
   }
 ];
@@ -53,9 +53,9 @@ const Projects = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="mb-12 md:mb-16 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <p className="text-gray-600 max-w-2xl mx-auto px-2">
-            A selection of my most notable design and creative projects spanning various industries and mediums.
+            A selection of my most character-defining attributes.
           </p>
         </motion.div>
 

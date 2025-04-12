@@ -3,9 +3,8 @@ import { useState } from 'react';
 import Logo from './Logo';
 
 const navItems = [
-  { title: 'About', href: '#about' },
-  { title: 'Experience', href: '#experience' },
-  { title: 'Projects', href: '#projects' },
+  { title: 'Home', href: '#about' },
+  { title: 'About Me', href: '#projects' },
   { title: 'Contact', href: '#contact' },
 ];
 

@@ -13,8 +13,11 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <p className="text-xl font-semibold">Mike Kuhn</p>
-            <p className="text-gray-400 mt-1">Creative Professional</p>
+            <div className="text-center">
+  <p className="text-xl font-semibold text-center">Mike Kuhn</p>
+  <p className="text-gray-400 mt-1 text-center">Professional Homosexual</p>
+</div>
+
           </motion.div>
 
           <motion.div
@@ -25,7 +28,7 @@ const Footer = () => {
             className="mt-6 md:mt-0"
           >
             <p className="text-sm text-gray-400">
-              &copy; {currentYear} Mike Kuhn. All rights reserved.
+              mikekuhn.gay
             </p>
           </motion.div>
         </div>
@@ -38,7 +41,7 @@ const Footer = () => {
           className="mt-8 pt-8 border-t border-gray-800 text-center"
         >
           <p className="text-sm text-gray-500">
-            Designed with passion and built with modern technologies.
+            Developed by Justin Kuhn
           </p>
         </motion.div>
       </div>

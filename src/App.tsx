@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Contact from "./components/Contact";
-import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -43,7 +42,6 @@ function App() {
     <div className="min-h-screen bg-white text-gray-900">
       <Navbar />
       <Hero />
-      <Experience />
       <Projects />
       <Contact />
       <Footer />

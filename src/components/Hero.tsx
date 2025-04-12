@@ -10,24 +10,28 @@ const Hero = () => {
     const tl = gsap.timeline();
 
     if (textRef.current) {
-      tl.from(textRef.current.querySelectorAll('.gsap-text'), {
-        y: 100,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 1,
-        ease: 'power4.out',
-      });
+      // Using fromTo to explicitly set starting and ending values
+      tl.fromTo(
+        textRef.current.querySelectorAll('.gsap-text'),
+        { y: 100, opacity: 0 },
+        { 
+          y: 0, 
+          opacity: 1, 
+          stagger: 0.2, 
+          duration: 1, 
+          ease: 'power4.out',
+        }
+      );
     }
 
-    return () => {
-      tl.kill();
-    };
+    // Empty cleanup function to avoid killing the animation
+    return () => {};
   }, []);
 
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex items-center pt-24 md:pt-32 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-24 md:pt-32 overflow-hidden"
       id="about"
     >
       <div className="absolute inset-0 z-0">
@@ -58,38 +62,19 @@ const Hero = () => {
         />
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 z-10 mt-12 md:mt-20">
-        <div className="max-w-3xl" ref={textRef}>
-          <motion.p
-            className="gsap-text text-indigo-600 font-medium mb-3 md:mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            Hello, I'm
-          </motion.p>
-          <motion.h1
-            className="gsap-text text-4xl md:text-7xl font-bold mb-4 md:mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-          >
+      <div className="container mx-auto px-4 md:px-6 z-10 text-center">
+        <div className="max-w-3xl mx-auto" ref={textRef}>
+          {/* Using only GSAP for text animations - removed Framer Motion animation props */}
+          <p className="gsap-text text-indigo-600 font-medium mb-3 md:mb-4">
+            Hayyyyyy, I'm
+          </p>
+          <h1 className="gsap-text text-4xl md:text-7xl font-bold mb-4 md:mb-6">
             Mike Kuhn
-          </motion.h1>
-          <motion.p
-            className="gsap-text text-lg md:text-2xl text-gray-700 mb-6 md:mb-8 leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-          >
-            A creative professional passionate about innovation and design. I blend strategic thinking with creative execution to deliver exceptional results.
-          </motion.p>
-          <motion.div
-            className="gsap-text flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-          >
+          </h1>
+          <p className="gsap-text text-lg md:text-2xl text-gray-700 mb-6 md:mb-8 leading-relaxed">
+            
+          </p>
+          <div className="gsap-text flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
             <motion.a
               href="#contact"
               className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg shadow-lg hover:bg-indigo-700 transition-colors duration-300 text-center"
@@ -104,9 +89,9 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              View My Work
+              About Me
             </motion.a>
-          </motion.div>
+          </div>
         </div>
       </div>
 
